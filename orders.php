@@ -63,6 +63,7 @@
          <p> Phương thức thanh toán : <span><?php echo $fetch_orders['method']; ?></span> </p>
          <p> Tổng giá : <span>$<?php echo $fetch_orders['total_price']; ?></span> </p>
          <p> Ngày đặt hàng : <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
+         <p> Trạng thái đơn hàng : <span><?php echo $fetch_orders['status']; ?></span> </p>
       </div>
       <?php
        }

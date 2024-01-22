@@ -15,6 +15,7 @@
         $address = mysqli_real_escape_string($conn,$_POST['street']);
         $note = mysqli_real_escape_string($conn, $_POST['note']);
         $placed_on = date('d-m-Y');
+        $status = 'Chờ xác nhận';
   
         $cart_total = 0;
   
@@ -33,7 +34,7 @@
                 echo 'alert("Đơn hàng đã tồn tại!");';
                 echo '</script>';
            }else{
-              mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, note, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$note', '$cart_total', '$placed_on')") or die('query failed');
+              mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, note, total_price, placed_on, status) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$note', '$cart_total', '$placed_on', '$status')") or die('query failed');
                 echo '<script>';
                 echo 'alert("Đặt hàng thành công!");';
                 echo '</script>';

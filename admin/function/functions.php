@@ -323,4 +323,28 @@
         $sql = "Select * From contact";
         return mysqli_query($con, $sql);
     }
+
+    // User
+    function view_users() {
+        global $con;
+        $sql = "Select * From user_register";
+        return mysqli_query($con, $sql);
+    }
+
+    // order
+    function view_orders() {
+        global $con;
+        $sql = "Select * From orders";
+        return mysqli_query($con, $sql);
+    }
+    function update_status_order($id, $status) {
+        global $con;
+        $query = "Update orders set status = '$status' where id = '$id'";
+        $result = mysqli_query($con, $query);
+
+        if ($result) {
+            set_message(display_success("Chagne status order success!"));
+            header('location: list_order.php');
+        }
+    }
 ?>

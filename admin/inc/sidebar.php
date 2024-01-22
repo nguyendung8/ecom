@@ -89,6 +89,22 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="list_order.php" class="nav-link">
+              <i class="nav-icon fas fa-shopping-bag"></i>
+              <p>
+                Order
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="list_user.php" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Account
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
